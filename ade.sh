@@ -1,9 +1,9 @@
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 clear
 echo "one"
-source ~/.bashrc
+sudo source ~/.bashrc
 clear
-sleep(5)
+sleep 5
 echo 'try'
 nvm install v14.15.5
 wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -
