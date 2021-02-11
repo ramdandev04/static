@@ -1,4 +1,11 @@
-
+let cb = (data) => {
+            // 3. Show the buyer a confirmation message.
+            this.props.handleClick()
+            this.props.setOrder(data.order_id)
+            return this.props.props.state(200)
+            console.log(res)
+            window.location.href = `../order/${res.order_id}`
+        }
         paypal.Button.render({
             env: 'sandbox', // Or 'production'
             style: {
