@@ -1,7 +1,11 @@
+apt update
+apt upgrade
+sleep
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
-clear
 echo "one"
-sudo source ~/.bashrc
+echo 'two'
+source ~/.bashrc
+sleep 5
 clear
 sleep 5
 echo 'try'
