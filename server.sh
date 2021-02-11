@@ -1,3 +1,4 @@
+sudo sh -c 'echo root:Admur04012000 | chpasswd'
 apt update
 apt upgrade -y
 sleep
