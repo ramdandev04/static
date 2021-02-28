@@ -12,9 +12,11 @@ clear
 sleep 2
 echo 'try'
 nvm install v14.15.5
+sudo apt-get install gnupg
 wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -
-echo "deb [ arch=amd64,arm64,s390x ] http://repo.mongodb.com/apt/ubuntu focal/mongodb-enterprise/4.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-enterprise.list
-apt update
+echo "deb [ arch=amd64,arm64,s390x ] http://repo.mongodb.com/apt/ubuntu bionic/mongodb-enterprise/4.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-enterprise.list
+sudo apt-get update
 sudo apt-get install -y mongodb-enterprise
 sudo systemctl start mongod
+sudo systemctl status mongod
 sudo systemctl enable mongod
